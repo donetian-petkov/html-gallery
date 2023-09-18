@@ -7,11 +7,13 @@ const populateGallery = (tag, index = 0) => {
     const images = imageList.find(item => item.tag === tag)?.images;
 
    images?.forEach(x => {
+       const divElement = document.createElement('div');
        const imgElement = document.createElement('img');
+       divElement.className = "gallery-item";
        imgElement.src = x;
        imgElement.alt = `nature${index++}`;
-       imgElement.className = "sideImages";
-       gallery.appendChild(imgElement);
+       divElement.appendChild(imgElement)
+       gallery.appendChild(divElement);
    });
 
 }
