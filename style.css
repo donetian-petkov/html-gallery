@@ -1,0 +1,27 @@
+#gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.highlight {
+    flex: 1;
+    margin: 10px;
+    max-height: 500px;
+    max-width: 300px;
+}
+
+.sideImages {
+    flex: 0;
+    margin: 10px;
+    max-height: 300px;
+    max-width: 200px;
+}
+
+.highlight:hover, .sideImages:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
