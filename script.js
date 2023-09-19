@@ -1,13 +1,20 @@
 import imageList from "./imageList.js";
 
 const gallery = document.getElementById('gallery');
-const buttons = document.querySelectorAll('[id*="button_"]');
+const buttons = document.querySelectorAll('[id*="button-"]');
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+const close = document.querySelector('.close');
+
 
 buttons.forEach(button =>
     button.addEventListener('click', function() {
         populateGallery(this.name);
-    }))
+    }));
 
+close.addEventListener('click', function() {
+    lightbox.style.display = 'none';
+});
 
 const populateGallery = (tag = "all", index = 0) => {
 
@@ -24,7 +31,13 @@ const populateGallery = (tag = "all", index = 0) => {
     images?.forEach(x => {
         const divElement = document.createElement('div');
         const imgElement = document.createElement('img');
-        divElement.className = "gallery-item";
+
+        divElement.className = "gallery__item";
+        imgElement.addEventListener('click',  function() {
+            lightboxImage.src = this.getAttribute('src');
+            lightbox.style.display = 'block';
+        });
+
         imgElement.src = x;
         imgElement.alt = `nature${index++}`;
         divElement.appendChild(imgElement)
@@ -32,6 +45,8 @@ const populateGallery = (tag = "all", index = 0) => {
     });
 
 }
+
+
 
 
 

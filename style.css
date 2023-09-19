@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background: antiquewhite;
 }
 
 
@@ -11,29 +12,123 @@ body {
     gap: 16px;
     padding: 16px;
     box-sizing: border-box;
+    justify-content: center;
+    align-content: center;
 }
 
-.gallery-item {
+.gallery__item {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.gallery-item img {
+.gallery__item img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     transition: transform .3s ease;
 }
 
-.gallery-item:hover img {
+.gallery__item:hover img {
     transform: scale(1.5) translate(10px, 20px);
+}
+
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+#lightbox img {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+button:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+button:hover:after {
+    transform: translate(0, 0);
+}
+
+button:active {
+    background-color: #ffdeda;
+    outline: 0;
+}
+
+button:hover {
+    outline: 0;
+}
+
+@media (min-width: 768px) {
+    button {
+        padding: 0 40px;
+    }
 }
 
 @media (orientation: portrait) {
     .gallery {
         grid-template-columns: repeat(auto-fill, minmax(50vh, 1fr));
+    }
+
+    .gallery__item:hover img {
+        transform: scale(1.5) translate(10px, 20px);
     }
 }
 

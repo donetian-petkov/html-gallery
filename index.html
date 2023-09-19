@@ -7,18 +7,22 @@
 </head>
 <body>
 <div id="filters">
-    <button id="button_all" name="all">All</button>
-    <button id="button_nature" name="nature">Nature</button>
-    <button id="button_city" name="city">City</button>
-    <button id="button_animals" name="animals">Animals</button>
-    <button id="button_people" name="people">People</button>
+    <button id="button-all" name="all">All</button>
+    <button id="button-nature" name="nature">Nature</button>
+    <button id="button-city" name="city">City</button>
+    <button id="button-animals" name="animals">Animals</button>
+    <button id="button-people" name="people">People</button>
 </div>
 
 <div id="gallery" class="gallery">
 
 </div>
 
-<div id="lightbox"></div>
+<div id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-image" src="" alt="">
+</div>
+
 <script type="module" src="imageList.js"></script>
 <script type="module" src="script.js"></script>
 </body>
