@@ -8,8 +8,9 @@ const close = document.querySelector('.close');
 
 
 buttons.forEach(button =>
-    button.addEventListener('click', function() {
-        populateGallery(this.name);
+    button.addEventListener('click', function(e) {
+
+        populateGallery(e.target.name);
     }));
 
 close.addEventListener('click', function() {
