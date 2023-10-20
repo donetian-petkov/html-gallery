@@ -6,7 +6,6 @@ const lightbox = document.getElementById('lightbox');
 const lightboxImage = document.getElementById('lightbox-image');
 const close = document.querySelector('.close');
 
-
 buttons.forEach(button =>
     button.addEventListener('click', function(e) {
 
@@ -14,6 +13,10 @@ buttons.forEach(button =>
     }));
 
 close.addEventListener('click', function() {
+    lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener('click', function() {
     lightbox.style.display = 'none';
 });
 
@@ -29,7 +32,7 @@ const populateGallery = (tag = "all", index = 0) => {
         images = imageList.map(item => item.images).flat();
     }
 
-    images?.forEach(x => {
+    images?.forEach(image => {
         const divElement = document.createElement('div');
         const imgElement = document.createElement('img');
 
@@ -39,7 +42,7 @@ const populateGallery = (tag = "all", index = 0) => {
             lightbox.style.display = 'block';
         });
 
-        imgElement.src = x;
+        imgElement.src = image;
         imgElement.alt = `nature${index++}`;
         divElement.appendChild(imgElement)
         gallery.appendChild(divElement);

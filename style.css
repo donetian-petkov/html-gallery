@@ -43,9 +43,19 @@ body {
     height: 100%;
     background-color: rgba(0,0,0,0.8);
 }
+
+#lightbox:hover {
+    cursor: pointer;
+}
+
 #lightbox img {
     margin: auto;
     display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
     max-width: 80%;
     max-height: 80%;
 }
@@ -116,6 +126,10 @@ button:active {
 
 button:hover {
     outline: 0;
+}
+
+img:hover {
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
