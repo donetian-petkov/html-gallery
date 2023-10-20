@@ -5,7 +5,23 @@ const buttons = document.querySelectorAll('[id*="button-"]');
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = document.getElementById('lightbox-image');
 const close = document.querySelector('.close');
+// Get the button element
+const myButton = document.getElementById("back-to-top");
 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+        myButton.style.display = "block";
+    } else {
+        myButton.style.display = "none";
+    }
+}
+
+myButton.onclick = function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 buttons.forEach(button =>
     button.addEventListener('click', function(e) {
 
@@ -49,9 +65,5 @@ const populateGallery = (tag = "all", index = 0) => {
     });
 
 }
-
-
-
-
 
 populateGallery();

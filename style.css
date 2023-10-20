@@ -61,16 +61,16 @@ body {
 }
 .close {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 0.6em;
+    right: 1.2em;
     color: #fff;
-    font-size: 30px;
+    font-size: 2.5em;
     cursor: pointer;
 }
 
 #filters {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    width: 60%;
+    margin: 1em auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,19 +79,19 @@ body {
 button {
     align-items: center;
     background-color: #fee6e3;
-    border: 2px solid #111;
-    border-radius: 8px;
+    border: 0.1em solid #111;
+    border-radius: 0.5em;
     box-sizing: border-box;
     color: #111;
     cursor: pointer;
     display: flex;
     font-family: Inter,sans-serif;
-    font-size: 16px;
-    height: 48px;
+    font-size: 1em;
     justify-content: center;
-    line-height: 24px;
-    max-width: 100%;
-    padding: 0 25px;
+    line-height: 2em;
+    width: 13%;
+    height: 3em;
+    padding: 0 2em;
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -102,15 +102,15 @@ button {
 
 button:after {
     background-color: #111;
-    border-radius: 8px;
+    border-radius: 0.5em;
     content: "";
     display: block;
-    height: 48px;
+    height: 3em;
     left: 0;
     width: 100%;
     position: absolute;
-    top: -2px;
-    transform: translate(8px, 8px);
+    top: -0.1em;
+    transform: translate(0.5em, 0.5em);
     transition: transform .2s ease-out;
     z-index: -1;
 }
@@ -132,7 +132,21 @@ img:hover {
     cursor: pointer;
 }
 
-@media (min-width: 768px) {
+#back-to-top {
+    width: 10%;
+    height: 3em;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 89%;
+    transition: opacity 0.3s ease-in-out, background ease-in-out, color ease-in-out;
+}
+
+#back-to-top {
+
+}
+
+@media (min-width: 1024px) {
     button {
         padding: 0 40px;
     }
