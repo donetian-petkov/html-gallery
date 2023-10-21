@@ -150,7 +150,7 @@ img:hover {
 
 }
 
-@media (min-width: 1024px) OR (orientation: portrait) {
+@media (max-width: 1024px) OR (orientation: portrait) {
 
     #filters {
         font-size: 2em;
@@ -178,5 +178,22 @@ img:hover {
 
     .gallery__item:hover img {
         transform: none;
+    }
+
+    #back-to-top {
+        position: fixed;
+        width: 20%;
+        font-size: 1.5em;
+        bottom: 5%;
+        left: 80%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #back-to-top:after {
+        display: none;
+
     }
 }

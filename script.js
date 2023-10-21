@@ -11,7 +11,7 @@ const myButton = document.getElementById("back-to-top");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
         myButton.style.display = "block";
     } else {
         myButton.style.display = "none";
