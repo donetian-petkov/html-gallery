@@ -137,6 +137,7 @@ img:hover {
 }
 
 #back-to-top {
+    display: none;
     width: 10%;
     height: 3em;
     justify-content: center;
@@ -144,10 +145,6 @@ img:hover {
     position: absolute;
     left: 89%;
     transition: opacity 0.3s ease-in-out, background ease-in-out, color ease-in-out;
-}
-
-#back-to-top {
-
 }
 
 @media (max-width: 1024px) OR (orientation: portrait) {
