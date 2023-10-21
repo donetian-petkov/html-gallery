@@ -38,6 +38,8 @@ lightbox.addEventListener('click', function() {
 
 const populateGallery = (tag = "all", index = 0) => {
 
+    const screenResolution = 'w=640&h=960';
+
     gallery.replaceChildren();
 
     let images;
@@ -58,7 +60,7 @@ const populateGallery = (tag = "all", index = 0) => {
             lightbox.style.display = 'block';
         });
 
-        imgElement.src = image;
+        imgElement.src = `${image}?${screenResolution}`
         imgElement.alt = `nature${index++}`;
         divElement.appendChild(imgElement)
         gallery.appendChild(divElement);
