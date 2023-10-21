@@ -147,7 +147,7 @@ img:hover {
     transition: opacity 0.3s ease-in-out, background ease-in-out, color ease-in-out;
 }
 
-@media (max-width: 1024px) OR (orientation: portrait) {
+@media (max-width: 768px) OR (orientation: portrait) {
 
     #filters {
         font-size: 2em;
